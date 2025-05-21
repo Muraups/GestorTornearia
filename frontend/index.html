@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor Tornearia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+</head>
+<body class="container py-4">
+  <h1 class="mb-4">Cadastro de Serviços</h1>
+  
+  <form id="formServico">
+    <input type="text" class="form-control mb-2" id="descricao" placeholder="Descrição" required />
+    <input type="text" class="form-control mb-2" id="cliente" placeholder="Cliente" required />
+    <input type="date" class="form-control mb-2" id="data" required />
+    <input type="number" class="form-control mb-2" id="valor" placeholder="Valor" required />
+    <input type="text" class="form-control mb-2" id="materiais" placeholder="Materiais (separados por vírgula)" />
+    <select class="form-control mb-2" id="status">
+      <option value="pendente">Pendente</option>
+      <option value="concluído">Concluído</option>
+    </select>
+    <button class="btn btn-primary">Cadastrar</button>
+  </form>
+
+  <hr />
+
+  <ul id="listaServicos" class="list-group"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
