@@ -31,13 +31,5 @@ router.delete('/:id', async (req, res) => {
   res.json({ msg: "Serviço removido com sucesso" });
 });
 
-app.get('/testar-conexao', async (req, res) => {
-  try {
-    const servicos = await Servico.find();
-    res.status(200).json({ mensagem: 'Conexão OK!', servicos });
-  } catch (error) {
-    res.status(500).json({ mensagem: 'Erro ao conectar com MongoDB', erro: error.message });
-  }
-});
 
 export default router;

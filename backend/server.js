@@ -15,3 +15,19 @@ app.use('/api/servicos', servicoRoutes);
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`🚀 Servidor rodando na porta ${port}`));
 
+// Rota de teste de conexão
+app.get('/testar-conexao', async (req, res) => {
+  try {
+    const servicos = await Servico.find();
+    res.status(200).json({
+      mensagem: '✅ Conectado com sucesso ao MongoDB!',
+      quantidade: servicos.length,
+      dados: servicos,
+    });
+  } catch (erro) {
+    res.status(500).json({
+      mensagem: '❌ Erro ao conectar com MongoDB.',
+      erro: erro.message,
+    });
+  }
+});
