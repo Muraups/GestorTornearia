@@ -1,5 +1,5 @@
-const express = require ('express');
-const Servico = require ('../models/Servico.js');
+import express from 'express';
+import Servico from '../models/Servico.js';
 
 const router = express.Router();
 
@@ -30,6 +30,5 @@ router.delete('/:id', async (req, res) => {
   await Servico.findByIdAndDelete(req.params.id);
   res.json({ msg: "Serviço removido com sucesso" });
 });
-
 
 export default router;

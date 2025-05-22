@@ -2,7 +2,7 @@
   "name": "gestor-tornearia",
   "version": "1.0.0",
   "main": "backend/server.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "start": "node backend/server.js"
   },

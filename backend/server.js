@@ -1,8 +1,8 @@
-const express = require ('express');
-const cors = require ('cors');
-const dotenv = require ('dotenv');
-const { connectDB } = require ('./config/db.js');
-const servicoRoutes = require ('./routes/servicos.js');
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import { connectDB } from './config/db.js';
+import servicoRoutes from './routes/servicos.js';
 
 dotenv.config();
 const app = express();
@@ -15,7 +15,7 @@ app.use('/api/servicos', servicoRoutes);
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`🚀 Servidor rodando na porta ${port}`));
 
-const Servico = require('./backend/models/Servico');
+import Servico from './models/Servico.js';
 // Rota de teste de conexão
 app.get('/testar-conexao', async (req, res) => {
   try {
