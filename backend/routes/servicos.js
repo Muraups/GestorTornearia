@@ -1,5 +1,5 @@
-import express from 'express';
-import Servico from '../models/Servico.js';
+const express = require ('express');
+const Servico = require ('../models/Servico.js');
 
 const router = express.Router();
 

@@ -1,8 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';
-import servicoRoutes from './routes/servicos.js';
+const express = require ('express');
+const cors = require ('cors');
+const dotenv = require ('dotenv');
+const { connectDB } = require ('./config/db.js');
+const servicoRoutes = require ('./routes/servicos.js');
 
 dotenv.config();
 const app = express();
